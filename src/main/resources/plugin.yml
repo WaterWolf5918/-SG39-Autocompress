@@ -1,0 +1,26 @@
+name: SG30DLL
+version: '${version}'
+main: tk.waterwolf.SG30DLL
+softdepend: [vault]
+api-version: 1.19
+commands:
+  Compress:
+    description: Compresser Stuff
+    usage: /compress [on|off|admin]
+    aliases: [comp, autocomp,autocompress,ac]
+    --permission: SG30DLL.compress.player
+    permission-message: You do not have permission!
+permissions:
+  SGDLL.compress.player:
+    description: Allows player usage of the /compress command
+    default: false
+    children:
+      SGDLL.compress.admin: false
+  SGDLL.compress.admin:
+    description: Allows admin commands
+    default: op
+
+  
+
+
+
