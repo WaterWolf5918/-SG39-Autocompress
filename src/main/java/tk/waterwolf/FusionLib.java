@@ -72,14 +72,6 @@ public class FusionLib {
     }
 
 
-    public static Boolean GetAutocompressMsgToggle(Player player){
-        PersistentDataContainer store = player.getPersistentDataContainer();
-        NamespacedKey key = new NamespacedKey(SG30DLL.getPlugin(), "msgcomp");
-        Boolean toggle = true;
-        if (store.getOrDefault(key, PersistentDataType.INTEGER, 1) >= 1){ toggle = true; }else{ toggle = false; }
-        return toggle;
-    }
-
     public static void SetAutocompressMsgToggle(Player player, Integer toggle2){
         PersistentDataContainer store2 = player.getPersistentDataContainer();
         NamespacedKey mkey = new NamespacedKey(SG30DLL.getPlugin(), "msgcomp");
