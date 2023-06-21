@@ -1,7 +1,6 @@
 package tk.waterwolf.events;
 import tk.waterwolf.CompressManager;
 import tk.waterwolf.FusionLib;
-import tk.waterwolf.OreLib;
 import tk.waterwolf.SG30DLL;
 
 import org.bukkit.Bukkit;

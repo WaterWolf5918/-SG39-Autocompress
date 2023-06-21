@@ -15,15 +15,6 @@ public class OnPlayerJoin implements Listener{
     }
     @EventHandler
     public void JoinEvent(PlayerJoinEvent event) {
-        //code to run when player joins //please readd this if needed
-        Player player = event.getPlayer();
-        FileConfiguration config = SG30DLL.getPlugin().config;
-        if (config.getBoolean("youAreAwesome")) {
-            player.sendMessage("You are awesome!");
-            FusionLib.Debug("> > > ",true);
-        } else {
-            player.sendMessage("You are not awesome...");
-            FusionLib.Debug(". . . ", true);
-        }
+
     }        
 }

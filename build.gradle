@@ -1,7 +1,7 @@
 plugins {
     id 'java'
 }
-compileJava {options.encoding = "UTF-8"}   
+compileJava {options.encoding = 'UTF-8'}   
 group = 'tk.waterwolf'
 version = '1.3.1'
 
@@ -21,8 +21,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT'
-    compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+    compileOnly 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
 }
 
 
@@ -47,6 +47,8 @@ tasks.withType(JavaCompile).configureEach {
     }
 }
 
+
+
 processResources {
     def props = [version: version]
     inputs.properties props
@@ -55,3 +57,36 @@ processResources {
         expand props
     }
 }
+
+
+task finalize (type: Exec){
+    workingDir '/test-server/'
+    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+        commandLine 'cmd','/c'
+    } else {
+        commandLine 'sh', '/c'
+    }
+    doLast {
+       println('Copying File From gradle to test server')
+       copy(){
+            from '/build/libs/SG30DLL-1.3.1.jar'
+            into '/test-server/plugins'
+       }
+       println('Copied')
+       println('$workingDir')
+        if (System.properties['os.name'].toLowerCase().contains('windows')) {
+            exec {
+                workingDir '/test-server'
+                executable 'test.bat'
+            }
+        } else {
+            exec {
+                executable 'test.sh'
+            }
+        }
+
+        
+    }
+}
+
+build.finalizedBy(finalize)

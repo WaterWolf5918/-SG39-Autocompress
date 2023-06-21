@@ -2,7 +2,6 @@ package tk.waterwolf.commands;
 
 
 import tk.waterwolf.FusionLib;
-import tk.waterwolf.OreLib;
 import tk.waterwolf.SG30DLL;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -46,41 +45,15 @@ public class Compress implements CommandExecutor {
                 case "info":
                     FusionLib.sendInfo(player);
                     break;
-                case "get":
-                    FusionLib.Debug("has", true);
-                    FusionLib.Debug(String.valueOf(FusionLib.GetAutocompressToggle(player)),true);
-                    FusionLib.Debug(String.valueOf(FusionLib.GetAutocompressMsgToggle(player)),true);
-                    break;
-                case "message":
-                    String subArgs = args[1].toLowerCase();  
-                    switch (subArgs){
-                        case "1":
-                        case "true":
-                        case "on" :
-                            FusionLib.Debug(subArgs, true);
-                            FusionLib.SetAutocompressMsgToggle(player, 1);
-                            break;
-                        case "0":
-                        case "false":
-                        case "off":
-                            FusionLib.Debug(subArgs, true);
-                            FusionLib.SetAutocompressMsgToggle(player, 0);
-                            break;
-                        default:
-                            FusionLib.sendToPlayer("&cHey! &7Please use either '&fon&7' or '&foff&7'&r", player, true);
-                            break;
-                    }
-                    break;
                 case "admin":
                     String subSubCommand = args[1].toLowerCase();
                     switch (subSubCommand){
-                        case "giveall":
+                        case "killswitch":
                             if (perms.playerHas(player,"SGDLL.compress.admin")){
-                                for (ItemStack num : OreLib.CompressedMEGA()) {
-                                    player.getInventory().addItem(num);
-                               }
-                                FusionLib.sendToPlayer("Gave Player All Compressed Items", player, true);
-                                player.updateInventory();
+                            //     for (ItemStack num : OreLib.CompressedMEGA()) {
+                            //         player.getInventory().addItem(num);
+                            //    }
+
                             }else{
                                 FusionLib.sendToPlayer("You don't have perms for this command (did toni forget to add them?)", player, false);
                             }

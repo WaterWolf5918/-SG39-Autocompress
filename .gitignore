@@ -1,3 +1,9 @@
+test-server/*
+test-server-old/*
+!test-server/runServ.bat
+!test-server/test.bat
+!test-server/start.ps1
+!test-server/ReadMe.ps1
 # Compiled class file
 *.class
 
@@ -26,4 +32,6 @@ startBuild.ps1
 .vscode
 .idea
 .gradle
-test server/*
+
+
+eula.txt

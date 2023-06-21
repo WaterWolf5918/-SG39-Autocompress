@@ -34,26 +34,15 @@ public class CompressTab implements TabCompleter{
                 argsList2.add("on");
                 argsList2.add("off");
                 if (admin){
-                    argsList2.add("give");
-                    argsList2.add("giveAll");
+                    argsList2.add("killswitch");
                 }
                 return argsList2;    
              case 3:
                 List<String> argsList3 = new ArrayList<>();
                 if (admin){
-                    argsList3.add("CompressedCoal");
-                    argsList3.add("CompressedCopper");
-                    argsList3.add("CompressedStone");
-                    argsList3.add("CompressedIron");
-                    argsList3.add("CompressedRedstone");
-                    argsList3.add("CompressedGold");
-                    argsList3.add("CompressedLapis");
-                    argsList3.add("CompressedEmerald");
-                    argsList3.add("CompressedObsidian");
-                    argsList3.add("CompressedLime");
-                    argsList3.add("CompressedMagenta");
-                    argsList3.add("CompressedMelon");
-                    argsList3.add("CompressedCookie");
+                    argsList3.add("on");
+                    argsList3.add("off");
+
                 }
                 return argsList3;
             default:

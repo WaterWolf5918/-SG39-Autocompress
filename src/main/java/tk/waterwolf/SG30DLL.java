@@ -2,7 +2,6 @@ package tk.waterwolf;
 
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import tk.waterwolf.commands.*;
@@ -12,7 +11,7 @@ import net.milkbowl.vault.permission.Permission;
 
 
 public final class SG30DLL extends JavaPlugin {
-    public FileConfiguration config = getConfig();
+    // public FileConfiguration config = getConfig();
     private static Economy econ = null;
     private static Permission perms = null;
     private static SG30DLL plugin;
@@ -41,22 +40,16 @@ public final class SG30DLL extends JavaPlugin {
 
         FusionLib.sendToConsole("Plugin finished loading!",true);
 
-        config.addDefault("youAreAwesome", true);
-        config.options().copyDefaults(true);
-        saveConfig();
+        // config.addDefault("youAreAwesome", true);
+        // config.options().copyDefaults(true);
+        // saveConfig();
 
     }
 
     public void registerEvents() {
         // Register the events here!
         new OnItemPickup(this);
-        new OnBlockPlace(this);
         new OnPlayerJoin(this);
-        // new OnInventoryInteract(this);
-        // new OnItemHeld(this);
-        // new OnBowShoot(this);
-        // new OnOffhandSwitch(this);
-        // new OnitemUse(this);
     }
 
     public void registerCommands() {
