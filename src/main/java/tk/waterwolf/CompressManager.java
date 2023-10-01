@@ -12,7 +12,6 @@ public class CompressManager {
     public static void checkCompress(Player player){
         if(FusionLib.GetAutocompressToggle(player) == false){return;}
         for (int i = 0; i < player.getInventory().getSize(); i++) {
-            Boolean compressMsg = FusionLib.GetAutocompressMsgToggle(player);
             if (player.getInventory().getItem(i) != null && player.getInventory().getItem(i).getType() != Material.AIR){
                 // item is not null and not air
                 if (player.getInventory().getItem(i).hasItemMeta() && player.getInventory().getItem(i).getItemMeta().hasLore()) {

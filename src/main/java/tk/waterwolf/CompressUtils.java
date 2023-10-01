@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import tk.waterwolf.FusionLib;
+// import tk.waterwolf.FusionLib;
 
 public class CompressUtils {
     public static ItemStack levelTwoGenerate(Material material,String loreString, String name){

@@ -3,13 +3,13 @@ package tk.waterwolf;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemFlag;
+
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.PluginAwareness.Flags;
+
 
 public class CompressLevelTwo {
     public static void Compress(Player player, int slot, int amount) {
+        Boolean compressMsg = FusionLib.GetAutocompressMsgToggle(player);
         Inventory inv = player.getInventory();
         FusionLib.Debug("Got compress level 2 call", true);
         FusionLib.Debug(inv.getItem(slot).getType().name(), true);
@@ -22,6 +22,9 @@ public class CompressLevelTwo {
                     );
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Lapis Lazuli&r", player, true);
+                }
                 break;
             }          
             case "CHARCOAL": {
@@ -32,6 +35,9 @@ public class CompressLevelTwo {
                     );
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Coal&r", player, true);
+                }
                 break;
             }            
             case "RAW_IRON_BLOCK": {
@@ -42,6 +48,9 @@ public class CompressLevelTwo {
                     );
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Raw Iron&r", player, true);
+                }
                 break;
             }
             case "IRON_BLOCK": {
@@ -52,6 +61,9 @@ public class CompressLevelTwo {
                     );
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Iron&r", player, true);
+                }
                 break;
             }
             case "REDSTONE_BLOCK": {
@@ -61,6 +73,9 @@ public class CompressLevelTwo {
                     "Condensed Redstone");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Redstone&r", player, true);
+                }
                 break;
             }
             case "RAW_COPPER_BLOCK": {
@@ -70,6 +85,9 @@ public class CompressLevelTwo {
                     "Condensed Raw Copper");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Raw Copper&r", player, true);
+                }
                 break;
             }
             case "COPPER_BLOCK": {
@@ -79,6 +97,9 @@ public class CompressLevelTwo {
                     "Condensed Copper");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Copper&r", player, true);
+                }
                 break;
             }
             case "RAW_GOLD_BLOCK": {
@@ -88,6 +109,9 @@ public class CompressLevelTwo {
                     "Condensed Raw Gold");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Raw Gold&r", player, true);
+                }
                 break;
             }
             case "GOLD_BLOCK": {
@@ -96,8 +120,10 @@ public class CompressLevelTwo {
                     "A dream for piglins to see.",
                     "Condensed Gold");
                 item.setAmount(amount);
-
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Gold&r", player, true);
+                }
                 break;
             }
             case "DIAMOND_BLOCK": {
@@ -107,6 +133,9 @@ public class CompressLevelTwo {
                     "Condensed Diamond");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Diamond&r", player, true);
+                }
                 break;
             }
             case "EMERALD_BLOCK": {
@@ -116,6 +145,9 @@ public class CompressLevelTwo {
                     "Condensed Emerald");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Emerald&r", player, true);
+                }
                 break;
             }
             case "CLAY": {
@@ -125,6 +157,9 @@ public class CompressLevelTwo {
                     "Condensed Uncut Diamond");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Cut Diamound&r", player, true);
+                }
                 break;
             }
             case "PRISMARINE": {
@@ -134,6 +169,9 @@ public class CompressLevelTwo {
                     "Condensed Lonsdaleite");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Lonsdaleite&r", player, true);
+                }
                 break;
             }
             case "PURPUR_BLOCK": {
@@ -143,6 +181,9 @@ public class CompressLevelTwo {
                     "Condensed Endium");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Endium&r", player, true);
+                }
                 break;
             }
             case "AMETHYST_BLOCK": {
@@ -152,6 +193,9 @@ public class CompressLevelTwo {
                     "Condensed Amethyst");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Amethyst&r", player, true);
+                }
                 break;
             }
             case "SCULK": {
@@ -161,6 +205,9 @@ public class CompressLevelTwo {
                     "Condensed Sculk");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Sculk&r", player, true);
+                }
                 break;
             }
             case "ANCIENT_DEBRIS": {
@@ -170,6 +217,9 @@ public class CompressLevelTwo {
                     "Condensed Debris");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Raw Netherite&r", player, true);
+                }
                 break;
             }
             case "NETHERITE_BLOCK": {
@@ -179,6 +229,9 @@ public class CompressLevelTwo {
                     "Condensed Netherite");
                 item.setAmount(amount);
                 inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Netherite&r", player, true);
+                }
                 break;
             }
         }
