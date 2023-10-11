@@ -45,6 +45,26 @@ public class Compress implements CommandExecutor {
                 case "info":
                     FusionLib.sendInfo(player);
                     break;
+                case "message":
+                    String subArgs = args[1].toLowerCase();
+                    switch (subArgs) {
+                        case "1":
+                        case "true":
+                        case "on":
+                            FusionLib.Debug(subArgs, true);
+                            FusionLib.SetAutocompressMsgToggle(player, 1);
+                            break;
+                        case "0":
+                        case "false":
+                        case "off":
+                            FusionLib.Debug(subArgs, true);
+                            FusionLib.SetAutocompressMsgToggle(player, 0);
+                            break;
+                        default:
+                            FusionLib.sendToPlayer("&cHey! &7Please use either '&fon&7' or '&foff&7'&r", player, true);
+                            break;
+                    }
+                    break;
                 case "admin":
                     String subSubCommand = args[1].toLowerCase();
                     switch (subSubCommand){
