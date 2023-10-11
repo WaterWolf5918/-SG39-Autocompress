@@ -44,7 +44,7 @@ public class FusionLib {
     }
 
     public static void sendInfo(Player player){
-        sendToPlayer("\n&x&0&8&4&c&f&8&l&n[&x&2&b&4&1&f&4&l&nS&x&4&e&3&6&f&0&l&nG&x&7&1&2&b&e&c&l&n.&x&9&4&2&1&e&8&l&nD&x&b&7&1&6&e&4&l&nL&x&d&a&0&b&e&0&l&nL&x&f&d&0&0&d&c&l&n] &x&7&1&9&5&f&fV&x&7&e&9&2&f&fe&x&8&b&8&e&f&fr&x&9&8&8&b&f&fs&x&a&5&8&8&f&fi&x&b&2&8&5&f&fo&x&b&e&8&1&f&en &x&c&b&7&e&f&e1&x&d&8&7&b&f&e.&x&e&5&7&8&f&e3&x&f&2&7&4&f&e.&x&f&f&7&1&f&1 ",player,false); //&x&f&2&7&4&f&e.&x&f&f&7&1&f&0
+        sendToPlayer("\n&x&0&8&4&c&f&8&l&n[&x&2&b&4&1&f&4&l&nS&x&4&e&3&6&f&0&l&nG&x&7&1&2&b&e&c&l&n.&x&9&4&2&1&e&8&l&nD&x&b&7&1&6&e&4&l&nL&x&d&a&0&b&e&0&l&nL&x&f&d&0&0&d&c&l&n] &x&7&1&9&5&f&fV&x&7&e&9&2&f&fe&x&8&b&8&e&f&fr&x&9&8&8&b&f&fs&x&a&5&8&8&f&fi&x&b&2&8&5&f&fo&x&b&e&8&1&f&en 2.0.1",player,false); //&x&f&2&7&4&f&e.&x&f&f&7&1&f&0
         sendToPlayer("&x&7&1&9&5&f&fC&x&7&8&9&3&f&fr&x&7&f&9&2&f&fe&x&8&5&9&0&f&fa&x&8&c&8&e&f&ft&x&9&3&8&c&f&fe&x&9&a&8&b&f&fd &x&a&0&8&9&f&fB&x&a&7&8&7&f&fy &x&a&e&8&6&f&fW&x&b&5&8&4&f&fa&x&b&b&8&2&f&et&x&c&2&8&0&f&ee&x&c&9&7&f&f&er&x&d&0&7&d&f&eW&x&d&6&7&b&f&eo&x&d&d&7&a&f&el&x&e&4&7&8&f&ef&x&e&b&7&6&f&e5&x&f&1&7&4&f&e9&x&f&8&7&3&f&e1&x&f&f&7&1&f&e8", player, false);
         sendToPlayer("&x&7&1&9&5&f&fB&x&7&5&9&4&f&fu&x&7&a&9&3&f&fg &x&7&e&9&2&f&fT&x&8&2&9&1&f&fe&x&8&7&9&0&f&fs&x&8&b&8&e&f&ft&x&8&f&8&d&f&fe&x&9&3&8&c&f&fd &x&9&8&8&b&f&fB&x&9&c&8&a&f&fy &x&a&0&8&9&f&fW&x&a&5&8&8&f&fa&x&a&9&8&7&f&ft&x&a&d&8&6&f&fe&x&b&2&8&5&f&fr&x&b&6&8&4&f&fW&x&b&a&8&2&f&eo&x&b&e&8&1&f&el&x&c&3&8&0&f&ef&x&c&7&7&f&f&e5&x&c&b&7&e&f&e9&x&d&0&7&d&f&e1&x&d&4&7&c&f&e8 &x&d&8&7&b&f&ea&x&d&d&7&a&f&en&x&e&1&7&9&f&ed &x&e&5&7&8&f&eT&x&e&9&7&6&f&eo&x&e&e&7&5&f&en&x&f&2&7&4&f&ei&x&f&6&7&3&f&e3&x&f&b&7&2&f&e0&x&f&f&7&1&f&e0", player, false);
         

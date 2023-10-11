@@ -14,6 +14,31 @@ public class CompressLevelTwo {
         FusionLib.Debug("Got compress level 2 call", true);
         FusionLib.Debug(inv.getItem(slot).getType().name(), true);
         switch (inv.getItem(slot).getType().name()) {
+            case "OAK_WOOD": {
+                ItemStack item = CompressUtils.levelThreeGenerate(
+                        Material.SPRUCE_LOG,
+                        "This is not the same log",
+                        "Condensed Log");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Wood&r", player, true);
+                }
+                break;
+            }
+            case "COBBLED_DEEPSLATE": {
+                ItemStack item = CompressUtils.levelThreeGenerateVerTwo(
+                        Material.POLISHED_DEEPSLATE,
+                        "Tons of rubbles.",
+                        " Condensed Cobblestone");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Stone&r", player, true);
+                }
+                break;
+            }
+
             case "LAPIS_BLOCK": {
                 ItemStack item = CompressUtils.levelThreeGenerate(
                     Material.LAPIS_BLOCK,

@@ -3,7 +3,7 @@ plugins {
 }
 compileJava {options.encoding = 'UTF-8'}   
 group = 'tk.waterwolf'
-version = '1.3.1'
+version = '2.0.1'
 
 repositories {
     mavenCentral()
@@ -69,7 +69,7 @@ task finalize (type: Exec){
     doLast {
        println('Copying File From gradle to test server')
        copy(){
-            from '/build/libs/SG30DLL-1.3.1.jar'
+            from '/build/libs/SG30DLL-2.0.1.jar'
             into '/test-server/plugins'
        }
        println('Copied')
