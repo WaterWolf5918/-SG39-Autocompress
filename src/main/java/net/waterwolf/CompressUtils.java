@@ -1,4 +1,4 @@
-package tk.waterwolf;
+package net.waterwolf;
 
 import java.util.Arrays;
 
@@ -49,12 +49,48 @@ public class CompressUtils {
         return item;
     }
 
+    public static ItemStack levelTwoGenerateVerTwoColorB(Material material,String loreString, String name){
+        FusionLib.Debug("Making Compressed Item", true);
+        ItemStack item = new ItemStack(material);
+        ItemMeta itemsMeta = item.getItemMeta();
+        String[] lore = {
+            FusionLib.getColored("&7➤ " + loreString),
+            FusionLib.getColored("&8&lMATERIAL"),
+            FusionLib.getColored("&2")
+        };
+
+        itemsMeta.setDisplayName(FusionLib.getColored("&7● &b" + name +" &7●"));
+        itemsMeta.setLore(Arrays.asList(lore));
+        
+        item.setItemMeta(itemsMeta);
+        return item;
+    }
+
     public static ItemStack levelThreeGenerate(Material material,String loreString, String name){
         FusionLib.Debug("Making Compressed Item", true);
         ItemStack item = new ItemStack(material);
         ItemMeta itemsMeta = item.getItemMeta();
         String[] lore = {
             FusionLib.getColored("&7➤ &f" + loreString),
+            FusionLib.getColored("&8&lMATERIAL"),
+            FusionLib.getColored("&3")
+        };
+        
+        
+        itemsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        itemsMeta.setDisplayName(FusionLib.getColored("&7● &3" + name +" &7●"));
+        itemsMeta.setLore(Arrays.asList(lore));
+    
+        item.setItemMeta(itemsMeta);
+        item.addUnsafeEnchantment(Enchantment.LUCK, 1);
+        return item;
+    }
+    public static ItemStack levelThreeGenerateColorB(Material material,String loreString, String name){
+        FusionLib.Debug("Making Compressed Item", true);
+        ItemStack item = new ItemStack(material);
+        ItemMeta itemsMeta = item.getItemMeta();
+        String[] lore = {
+            FusionLib.getColored("&7➤ " + loreString),
             FusionLib.getColored("&8&lMATERIAL"),
             FusionLib.getColored("&3")
         };
@@ -106,4 +142,23 @@ public class CompressUtils {
         return item;
     }
 
+    public static ItemStack levelThreeGenerateVerThree(Material material,String loreString, String name){
+        FusionLib.Debug("Making Compressed Item", true);
+        ItemStack item = new ItemStack(material);
+        ItemMeta itemsMeta = item.getItemMeta();
+        String[] lore = {
+            FusionLib.getColored("&7➤ &f" + loreString),
+            FusionLib.getColored("&8&lMATERIAL"),
+            FusionLib.getColored("&3")
+        };
+        
+        
+        itemsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        itemsMeta.setDisplayName(FusionLib.getColored("&7● &3" + name +"&7●"));
+        itemsMeta.setLore(Arrays.asList(lore));
+    
+        item.setItemMeta(itemsMeta);
+        item.addUnsafeEnchantment(Enchantment.LURE, 1);
+        return item;
+    }
 }

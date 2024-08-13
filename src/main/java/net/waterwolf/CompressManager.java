@@ -1,4 +1,4 @@
-package tk.waterwolf;
+package net.waterwolf;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

@@ -1,4 +1,4 @@
-package tk.waterwolf;
+package net.waterwolf;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -14,6 +14,44 @@ public class CompressLevelTwo {
         FusionLib.Debug("Got compress level 2 call", true);
         FusionLib.Debug(inv.getItem(slot).getType().name(), true);
         switch (inv.getItem(slot).getType().name()) {
+            case "QUARTZ": {
+                ItemStack item = CompressUtils.levelThreeGenerate(
+                        Material.QUARTZ_BLOCK,
+                        "Pure light.",
+                        "Condensed Cosmonite");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Cosmonite&r", player, true);
+                }
+                break;
+            }
+
+            case "GLISTERING_MELON_SLICE": {
+                ItemStack item = CompressUtils.levelThreeGenerateColorB(
+                        Material.MELON,
+                        "WaterWolf's Dream",
+                        "Condensed Melon");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Melon&r", player, true);
+                }
+                break;
+            }
+
+            case "OBSIDIAN": {
+                ItemStack item = CompressUtils.levelThreeGenerateVerThree(
+                        Material.OBSIDIAN,
+                        "Located at the peaks of the spikes.",
+                        "Condensed Obsidian ");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Packed Obsidian&r", player, true);
+                }
+                break;
+            }
             case "OAK_WOOD": {
                 ItemStack item = CompressUtils.levelThreeGenerate(
                         Material.SPRUCE_LOG,

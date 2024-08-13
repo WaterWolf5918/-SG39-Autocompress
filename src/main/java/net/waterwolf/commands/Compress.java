@@ -1,8 +1,6 @@
-package tk.waterwolf.commands;
+package net.waterwolf.commands;
 
 
-import tk.waterwolf.FusionLib;
-import tk.waterwolf.SG30DLL;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -10,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import net.milkbowl.vault.permission.Permission;
+import net.waterwolf.FusionLib;
+import net.waterwolf.SG30DLL;
 
 public class Compress implements CommandExecutor {
 

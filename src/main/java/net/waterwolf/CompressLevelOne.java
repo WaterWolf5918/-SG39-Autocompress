@@ -1,4 +1,4 @@
-package tk.waterwolf;
+package net.waterwolf;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -14,6 +14,43 @@ public class CompressLevelOne {
         FusionLib.Debug(inv.getItem(slot).getType().name(), true);
 
         switch (inv.getItem(slot).getType().name()) {
+            case "WHITE_DYE": {
+                ItemStack item = CompressUtils.levelTwoGenerateVerTwo(
+                    Material.QUARTZ,
+                    "From the heavens.",
+                    "Packed Cosmonite");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Cosmonite&r", player, true);
+                }
+                break;
+            }
+            case "MELON_SLICE": {
+                ItemStack item = CompressUtils.levelTwoGenerateVerTwoColorB(
+                    Material.GLISTERING_MELON_SLICE,
+                    "It sparkles.",
+                    "Packed Melon");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Melon&r", player, true);
+                }
+                break;
+            }
+
+            case "FLINT": {
+                ItemStack item = CompressUtils.levelTwoGenerateVerTwo(
+                    Material.OBSIDIAN,
+                    "Marvelous piece of art.",
+                    "Packed Obsidian");
+                item.setAmount(amount);
+                inv.addItem(item);
+                if (compressMsg) {
+                    FusionLib.sendToPlayer("&fCompressed &7Obsidian&r", player, true);
+                }
+                break;
+            }
             case "OAK_LOG": {
                 ItemStack item = CompressUtils.levelTwoGenerateVerTwo(
                         Material.OAK_WOOD,

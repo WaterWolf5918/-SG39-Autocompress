@@ -1,4 +1,4 @@
-package tk.waterwolf.commands;
+package net.waterwolf.commands;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,7 @@ import org.bukkit.entity.Player;
 
 
 import net.milkbowl.vault.permission.Permission;
-
-import tk.waterwolf.SG30DLL;
+import net.waterwolf.SG30DLL;
 
 public class CompressTab implements TabCompleter{
 

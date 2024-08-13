@@ -1,13 +1,14 @@
-package tk.waterwolf;
+package net.waterwolf;
 
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.waterwolf.commands.*;
-import tk.waterwolf.events.*;
+
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
+import net.waterwolf.commands.*;
+import net.waterwolf.events.*;
 
 
 public final class SG30DLL extends JavaPlugin {
